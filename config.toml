@@ -1,3 +1,17 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://mikedovale.com/'   # <-- Your real domain or GitHub Pages URL
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Mike Dovale Photography'
+theme = 'hugo-theme-gallery'
+[pagination]
+  pagerSize = 12
+
+[params]
+  title = "Mike Dovale Gallery"
+  description = "A collection of my favorite photographs."
+  copyright = "© 2025 Mike Dovale"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
