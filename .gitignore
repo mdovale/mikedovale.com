@@ -1,0 +1,42 @@
+# Ignore Hugo-generated files and folders
+/public/
+/resources/_gen/
+/resources/_build/
+/hugo_stats.json
+.hugo_build.lock
+
+# Ignore system files (macOS)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore temporary files
+*.swp
+*.swo
+*~
+
+# Ignore Node.js tools if ever used (optional, safe to include)
+node_modules/
+npm-debug.log
+
+# Ignore Visual Studio Code settings
+.vscode/
+assets/jsconfig.json
+
+# Ignore Hugo theme submodule locks (safe)
+themes/*/exampleSite/
+themes/*/node_modules/
+themes/*/.hugo_build.lock
+
+# Ignore output artifacts if you build manually
+*.tar.gz
+*.zip
+
+# Ignore backups
+*.bak
+*.tmp
+*.temp
+*.old
+
+# Ignore Hugo cache (newer versions may use it)
+.cache/
