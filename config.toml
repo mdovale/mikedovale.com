@@ -1,17 +1,68 @@
-baseURL = 'https://mikedovale.com/'   # <-- Your real domain or GitHub Pages URL
-languageCode = 'en-us'
-title = 'Mike Dovale Photography'
-theme = 'hugo-theme-gallery'
+baseURL = "https://mikedovale.com/"
+title = "The Photography of Miguel Dovale"
+languageCode = "en"
+defaultContentLanguage = "en"
+timeZone = "Europe/Berlin"
+timeout = "120s"
+theme = "hugo-theme-gallery"
+
+copyright = "© 2025 Miguel Dovale"
+disableKinds = ["taxonomy"]
+enableRobotsTXT = true
+
 [pagination]
   pagerSize = 12
 
 [params]
-  title = "Mike Dovale Gallery"
-  description = "A collection of my favorite photographs."
-  copyright = "© 2025 Mike Dovale"
+  defaultTheme = "dark"
+  description = "A collection of favorite photographs."
+  title = "Miguel Dovale"
+
+  [params.author]
+    name = "Miguel Dovale"
+    email = "mikedovale@pm.me"
+
+  [params.socialIcons]
+    instagram = "https://www.instagram.com/mikedovale"  # <-- Replace with your real Instagram if available
+    github = "https://github.com/mdovale"                # <-- Your GitHub handle
+    email = "mailto:mikedovale@pm.me"
+    # Optional ones, uncomment if you want later:
+    #website = "https://mikedovale.com"
+    #flickr = "https://www.flickr.com"
+    #500px = "https://500px.com"
+
+  [params.gallery]
+    # boxSpacing = 10  # Uncomment to adjust justified layout spacing
+    # targetRowHeight = 288
+    # targetRowHeightTolerance = 0.25
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  quality = 75
+  resampleFilter = "CatmullRom"
+
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[module]
+  [module.hugoVersion]
+    min = "0.121.2"
+
+  [[module.imports]]
+    path = "hugo-theme-gallery"
 
 [menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
+  [[menu.footer]]
+    name = "GitHub"
+    url = "https://github.com/mdovale"
+    weight = 3
+
+[services]
+  [services.rss]
+    limit = 100
