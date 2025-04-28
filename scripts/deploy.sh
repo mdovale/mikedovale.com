@@ -22,6 +22,9 @@ cd public
 
 echo "📸 Preparing to deploy updated site..."
 
+# Pull any remote changes first to avoid non-fast-forward errors
+git pull origin gh-pages --rebase
+
 # Stage all changes
 git add .
 
