@@ -1,0 +1,26 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore Hugo build artifacts that should not be committed manually
+resources/
+.cache/
+.hugo_build.lock
+
+# Ignore backup files
+*~
+
+# Node.js dependencies if mistakenly copied
+node_modules/
+
+# Logs
+*.log
+
+# Ignore deploy logs if mistakenly copied
+deployments.log
