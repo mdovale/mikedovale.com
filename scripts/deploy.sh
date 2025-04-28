@@ -36,3 +36,19 @@ git commit -m "$commit_message"
 git push origin gh-pages
 
 echo "🚀 Deployed successfully to GitHub Pages!"
+
+# Move back to project root
+cd ..
+
+# Generate deployment log entry
+DEPLOY_SHA=$(git -C public rev-parse HEAD)
+
+# Count galleries (directories directly under content/)
+GALLERY_COUNT=$(find content/ -mindepth 1 -maxdepth 1 -type d | wc -l)
+
+# Count images (JPEG files under all galleries)
+IMAGE_COUNT=$(find content/ -iname '*.jpg' | wc -l)
+
+# Write to deployments.log
+echo "$(date '+%Y-%m-%d %H:%M:%S') - Deployed commit $DEPLOY_SHA | Galleries: $GALLERY_COUNT | Images: $IMAGE_COUNT" >> deployments.log
+echo "📜 Logged deployment: Commit $DEPLOY_SHA | Galleries: $GALLERY_COUNT | Images: $IMAGE_COUNT"

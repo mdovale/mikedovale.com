@@ -40,3 +40,9 @@ themes/*/.hugo_build.lock
 
 # Ignore Hugo cache (newer versions may use it)
 .cache/
+
+# Ignore all .log files
+*.log
+
+# But NOT deployments.log
+!deployments.log
