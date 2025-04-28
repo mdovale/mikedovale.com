@@ -1,123 +1,104 @@
-# mikedovale.com — Personal website
 
-This repository contains the **source code and content** for my personal photography website, built with **Hugo** and hosted on **GitHub Pages**.
+# mikedovale.com website
 
----
+## Overview
 
-## 📸 About
+This is the source repository for [MikeDovale.com](https://www.mikedovale.com/), a professional photography gallery site powered by [Hugo](https://gohugo.io/) and the [hugo-theme-gallery](https://github.com/nicokaiser/hugo-theme-gallery) theme.
 
-The site features a gallery of high-resolution film and digital photographs, optimized for both quality and web performance.  
-It is designed to be simple, fast, and manually maintainable without relying on heavy CMS systems.
+✅ Hugo project (main branch)  
+✅ Built website (gh-pages branch)  
+✅ Clean, minimal setup optimized for fast, scalable galleries.
 
-- **Site Engine:** [Hugo](https://gohugo.io/)
-- **Theme:** [hugo-theme-gallery](https://github.com/nicokaiser/hugo-theme-gallery)
-- **Hosting:** [GitHub Pages](https://pages.github.com/)
-- **Domain:** [www.mikedovale.com](https://www.mikedovale.com)
 
----
-
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 mikedovale.com/
 ├── archetypes/
 ├── content/
-│    └── gallery/       # Photo metadata files (.md)
+│    ├── andrea-2020/        # One gallery = one Page Bundle
+│    │    ├── index.md
+│    │    ├── andrea-3516.jpg
+│    │    ├── andrea-4114.jpg
+│    │    └── (...)
+│    ├── jamy-2020/
+│    │    ├── index.md
+│    │    └── (...)
+│    └── _index.md            # Home listing page
 ├── layouts/
-├── public/             # Built site (linked to gh-pages branch)
+├── public/                   # Built site (gh-pages branch)
 ├── resources/
-│    └── _gen/          # Hugo-generated assets (ignored)
-├── static/
-│    └── gallery/       # Actual JPEG image files
+├── static/                   # Static assets (logos, CSS if needed)
 ├── themes/
 │    └── hugo-theme-gallery/
-├── config.toml         # Site configuration
+├── config.toml
 ├── .gitignore
-├── CNAME
-└── scripts/            # Helper automation scripts
-    ├── deploy.sh
-    └── replace-photo.sh
+├── CNAME                     # Custom domain: www.mikedovale.com
+├── scripts/
+│    ├── deploy.sh             # One-command deploy
+│    └── replace-photo.sh      # Cleanly replace/update photo
+└── README.md                  # This file
 ```
 
+
+## How Galleries Work
+
+- Each gallery is a **Page Bundle** under `content/`.
+- Each gallery lives in its own folder: e.g., `content/andrea-2020/`
+- Inside each gallery folder:
+  - `index.md` defines the gallery metadata.
+  - Images (`.jpg`) are placed alongside the `index.md`.
+- No manual list of images is needed. Hugo automatically detects all images via `.Resources`.
+
+**Minimal `index.md` example:**
+
+```markdown
 ---
-
-## 🛠️ Local Development
-
-### 1. Install Hugo
-
-Install Hugo (extended version) via [Homebrew](https://brew.sh/) on macOS:
-
-```bash
-brew install hugo
-```
-
-### 2. Clone the Repo
-
-```bash
-git clone git@github.com:mdovale/mikedovale.com.git
-cd mikedovale.com
-```
-
-### 3. Start Local Server
-
-```bash
-hugo server
-```
-
-The site will be available at `http://localhost:1313/`.
-
+title: "Andrea (2020)"
+date: 2022-10-02T00:00:00
+description: "A tender and introspective portrait session with Andrea, captured in soft natural light."
+resources:
+  - src: andrea-3516.jpg
+    params:
+      cover: true
 ---
-
-## 🚀 Deployment Workflow
-
-### Regular Site Update (Add Photos, Content Changes)
-
-```bash
-./scripts/deploy.sh
 ```
 
-This script will:
-- Clean build caches
-- Rebuild the Hugo site
-- Commit and push changes to the `gh-pages` branch
+**Notes:**
+- Cover image: Set by marking an image `cover: true`.
+- Lightbox and justified layout are built-in.
+- SEO and Open Graph meta are automatic.
 
-✅ Your live website will update automatically.
 
----
+## Workflow
 
-## 🖼️ Replacing an Existing Photo (Without Repo Bloat)
+| Action                     | Command |
+|:---------------------------|:--------|
+| Build and preview locally  | `hugo server` |
+| Build production site      | `hugo` |
+| Deploy to GitHub Pages     | `./scripts/deploy.sh` |
+| Replace a photo cleanly    | `./scripts/replace-photo.sh path/to/photo.jpg` |
 
-If you create a better edit of an existing photo:
 
-1. Replace the `.jpg` file manually inside `static/gallery/`.
-2. Run:
+## Theme Setup
 
-```bash
-./scripts/replace-photo.sh static/gallery/your-photo.jpg
-```
+- [hugo-theme-gallery](https://github.com/nicokaiser/hugo-theme-gallery) installed as a Git submodule.
+- No theme modifications are needed if using the expected Page Bundle structure.
+- Follow theme guidelines: images directly inside `content/album-name/`, not inside `static/`.
 
-This script will:
-- Purge the old photo from Git history
-- Stage and commit the new photo
-- Force push to GitHub
 
-✅ Keeps the repository size optimized.
+## Hosting
 
----
+- Website hosted via GitHub Pages.
+- Source (`main` branch) separated from built site (`gh-pages` branch).
+- CNAME points to `www.mikedovale.com`.
 
-## 🛡️ Important Notes
 
-- **Do not manually edit the `/public/` folder** except via Hugo builds.
-- **All content and maintenance happen on `main` branch**.
-- **Deployment happens via `gh-pages` branch**.
+## Important Notes
 
----
+- Never manually modify `/public/` — it is auto-generated.
+- Stick to folder naming conventions: lowercase, hyphens instead of spaces.
+- Future improvements may include automatic image resizing pipelines.
 
-## 📄 License
-
-Content (photographs and text) © 2025 Mike Dovale.  
-All rights reserved.
-
-Source code for the site itself (configuration, scripts) may be adapted under the [MIT License](https://opensource.org/licenses/MIT).
 
 ---
