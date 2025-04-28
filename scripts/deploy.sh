@@ -22,15 +22,15 @@ cd public
 
 echo "📸 Preparing to deploy updated site..."
 
-# Pull any remote changes first to avoid non-fast-forward errors
-git pull origin gh-pages --rebase
-
 # Stage all changes
 git add .
 
 # Create a new commit
 commit_message="Update site: $(date '+%Y-%m-%d %H:%M:%S')"
 git commit -m "$commit_message"
+
+# Pull any remote changes first to avoid non-fast-forward errors
+git pull origin gh-pages --rebase
 
 # Push to gh-pages branch
 git push origin gh-pages
