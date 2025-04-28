@@ -2,9 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mikedovale.com/categories/</loc>
+    <loc>https://mikedovale.com/andrea-2020/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mikedovale.com/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mikedovale.com/categories/</loc>
   </url><url>
     <loc>https://mikedovale.com/tags/</loc>
   </url>
