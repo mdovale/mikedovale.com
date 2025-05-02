@@ -70,7 +70,7 @@ DEPLOY_SHA=$(git -C public rev-parse HEAD)
 GALLERY_COUNT=$(find content/ -mindepth 1 -maxdepth 1 -type d | wc -l)
 IMAGE_COUNT=$(find content/ -iname '*.jpg' | wc -l)
 
-echo "$(date '+%Y-%m-%d %H:%M:%S') - Full reset deployment commit $DEPLOY_SHA | Galleries: $GALLERY_COUNT | Images: $IMAGE_COUNT" >> deployments.log
+echo "$(date '+%Y-%m-%d %H:%M:%S') - Deployed commit $DEPLOY_SHA | Galleries: $GALLERY_COUNT | Images: $IMAGE_COUNT (with history reset)" >> deployments.log
 echo "📜 Logged full reset deployment: Commit $DEPLOY_SHA | Galleries: $GALLERY_COUNT | Images: $IMAGE_COUNT"
 
 echo "🎯 Done! gh-pages repo is now fresh and fully logged."
