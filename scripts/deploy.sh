@@ -40,6 +40,8 @@ echo "🚀 Deployed successfully to GitHub Pages!"
 # Move back to project root
 cd ..
 
+echo "📝 Updating log..."
+
 # Generate deployment log entry
 DEPLOY_SHA=$(git -C public rev-parse HEAD)
 
@@ -52,3 +54,9 @@ IMAGE_COUNT=$(find content/ -iname '*.jpg' | wc -l)
 # Write to deployments.log
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Deployed commit $DEPLOY_SHA | Galleries: $GALLERY_COUNT | Images: $IMAGE_COUNT" >> deployments.log
 echo "📜 Logged deployment: Commit $DEPLOY_SHA | Galleries: $GALLERY_COUNT | Images: $IMAGE_COUNT"
+
+git add deployments.log
+
+git commit -m "$commit_message"
+
+git push 
