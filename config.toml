@@ -66,6 +66,11 @@ enableRobotsTXT = true
     weight = 1
 
   [[menu.main]]
+    name = "Project: Saruuliña"
+    url = "/saruuliña"
+    weight = 1
+
+  [[menu.main]]
     name = "Project: Andrea"
     url = "/andrea-2020"
     weight = 2
