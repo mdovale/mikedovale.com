@@ -1,16 +1,15 @@
-/* Headings for content pages */
-.content h1 {
+.prose h1 {
     font-size: 2.5em;
     margin-top: 1em;
     border-bottom: 2px solid #ccc;
 }
 
-.content h2 {
+.prose h2 {
     font-size: 2em;
     margin-top: 0.75em;
 }
 
-.content h3 {
+.prose h3 {
     font-size: 1.5em;
     margin-top: 0.5em;
 }
