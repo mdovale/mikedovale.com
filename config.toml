@@ -17,6 +17,7 @@ enableRobotsTXT = true
   defaultTheme = "dark"
   description = "A collection of favorite photographs."
   title = "Miguel Dovale"
+  customCSS = ["css/custom.css"]
 
   [params.author]
     name = "Miguel Dovale"
@@ -58,6 +59,27 @@ enableRobotsTXT = true
     path = "hugo-theme-gallery"
 
 [menu]
+
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Project: Andrea"
+    url = "/andrea-2020"
+    weight = 2
+
+  [[menu.main]]
+    name = "Project: Boomtown"
+    url = "/boomtown-2017-2018"
+    weight = 2
+
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 3
+
   [[menu.footer]]
     name = "GitHub"
     url = "https://github.com/mdovale"

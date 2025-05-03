@@ -6,4 +6,5 @@ resources:
   - src: Boomtown-25.jpg
     params:
       cover: true
+      hidden: true
 ---
