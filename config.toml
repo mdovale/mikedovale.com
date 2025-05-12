@@ -73,6 +73,11 @@ enableRobotsTXT = true
   [[menu.main]]
     name = "Project: Saruuliña"
     url = "/saruuliña"
+    weight = 1
+
+  [[menu.main]]
+    name = "Project: Héroes (2022)"
+    url = "/heroes-2022"
     weight = 2
 
   [[menu.main]]
