@@ -1,0 +1,15 @@
+.prose h1 {
+    font-size: 2.5em;
+    margin-top: 1em;
+    border-bottom: 2px solid #ccc;
+}
+
+.prose h2 {
+    font-size: 2em;
+    margin-top: 0.75em;
+}
+
+.prose h3 {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
