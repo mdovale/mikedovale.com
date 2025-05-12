@@ -21,12 +21,12 @@ enableRobotsTXT = true
 
   [params.author]
     name = "Miguel Dovale"
-    email = "mikedovale@pm.me"
+    email = "mikedovale.gloss999@passinbox.com"
 
   [params.socialIcons]
-    instagram = "https://www.instagram.com/mikedovale"  # <-- Replace with your real Instagram if available
-    github = "https://github.com/mdovale"                # <-- Your GitHub handle
-    email = "mailto:mikedovale@pm.me"
+    instagram = "https://www.instagram.com/mikedovale"
+    github = "https://github.com/mdovale"
+    email = "mailto:mikedovale.gloss999@passinbox.com"
     # Optional ones, uncomment if you want later:
     #website = "https://mikedovale.com"
     #flickr = "https://www.flickr.com"
@@ -43,7 +43,7 @@ enableRobotsTXT = true
   section = ["HTML"]
 
 [imaging]
-  quality = 75
+  quality = 100
   resampleFilter = "CatmullRom"
 
   [imaging.exif]
