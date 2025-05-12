@@ -63,32 +63,37 @@ enableRobotsTXT = true
   [[menu.main]]
     name = "Home"
     url = "/"
+    weight = -1
+
+  [[menu.main]]
+    name = "Project: Tucson in 6x17"
+    url = "/tucson-6x17"
     weight = 1
 
   [[menu.main]]
     name = "Project: Saruuliña"
     url = "/saruuliña"
-    weight = 1
+    weight = 2
 
   [[menu.main]]
     name = "Project: Andrea"
     url = "/andrea-2020"
-    weight = 2
+    weight = 3
 
   [[menu.main]]
     name = "Project: Boomtown"
     url = "/boomtown-2017-2018"
-    weight = 2
+    weight = 4
 
   [[menu.main]]
     name = "About"
     url = "/about"
-    weight = 3
+    weight = 0
 
   [[menu.footer]]
     name = "GitHub"
     url = "https://github.com/mdovale"
-    weight = 3
+    weight = 0
 
 [services]
   [services.rss]
